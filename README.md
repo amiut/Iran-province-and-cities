@@ -3,9 +3,9 @@ List of provinces and their provinces in Iran formatted in JSON
 
 React Example: (json file imported as `iranCities`)
 ```
-const [cities, setCities] = useState([]);
-
 function MyComponent() {
+  const [cities, setCities] = useState([]);
+  
   return (
     <>
       <select
