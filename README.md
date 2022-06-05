@@ -1,5 +1,5 @@
 # Iran-province-and-cities
-List of provinces and their provinces in Iran formatted in JSON
+List of provinces and their cities in Iran formatted in JSON
 
 React Example: (json file imported as `iranCities`)
 ```
