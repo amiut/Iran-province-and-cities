@@ -1,7 +1,9 @@
 # Iran-province-and-cities
 List of provinces and their cities in Iran formatted in JSON
 
-React Example: (json file imported as `iranCities`)
+## React Example
+json file is imported as `iranCities`
+
 ```
 import iranCities from './path-to-json-file.json';
 
