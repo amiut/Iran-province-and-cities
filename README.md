@@ -13,11 +13,12 @@ function MyComponent() {
 
   useEffect(() => {
     if (province) {
-      setCities(
-        iranCities.find((v) => v.province === province)
-          ?.cities
-      );
-
+      const foundProvince = iranCities.find((v) => v.province === province);
+      
+      if (foundProvince) {
+        setCities(foundProvince.cities);
+      }
+      
     } else {
       setCities([]);
     }
