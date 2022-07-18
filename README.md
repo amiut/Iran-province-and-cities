@@ -34,10 +34,10 @@ function MyComponent() {
         }}
       >
         <opton value="">انتخاب استان</option>
-        {iranCities.map((province, k) => (
+        {iranCities.map((province, idx) => (
           <option
             value={province.province}
-            key={`province_${k}`}
+            key={idx}
           >
             {province.province}
           </option>
@@ -47,8 +47,8 @@ function MyComponent() {
       <select name="city">
         <option value="">انتخاب شهر</option>
 
-        {cities.map((city, k) => (
-          <option key={`city_${k}`} value={city.name}>
+        {cities.map((city, idx) => (
+          <option key={idx} value={city.name}>
             {city.name}
           </option>
         ))}
