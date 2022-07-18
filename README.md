@@ -4,22 +4,32 @@ List of provinces and their cities in Iran formatted in JSON
 ## React Example
 json file is imported as `iranCities`
 
-```
+```jsx
 import iranCities from './path-to-json-file.json';
 
 function MyComponent() {
+  const [province, setProvince] = useState('');
   const [cities, setCities] = useState([]);
+
+  useEffect(() => {
+    if (province) {
+      setCities(
+        iranCities.find((v) => v.province === province)
+          ?.cities
+      );
+
+    } else {
+      setCities([]);
+    }
+    
+  }, [province]);
   
   return (
     <>
       <select
         name="province"
-        onBlur={(e) => {
-          e.preventDefault();
-          setCities(
-            iranCities.find((v) => v.province === e.target.value)
-              ?.cities
-          );
+        onChange={(e) => {
+          setProvince(e.target.value);
         }}
       >
         <opton value="">انتخاب استان</option>
